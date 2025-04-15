@@ -25,10 +25,10 @@ public class PersonagemSeeder {
 
             for (int i = 0; i < 10; i++) {
                 Personagem personagem = Personagem.builder()
-                        .name(nomes.get(new Random().nextInt(nomes.size())))
+                        .nome(nomes.get(new Random().nextInt(nomes.size())))
                         .classe(classes.get(new Random().nextInt(classes.size())))
                         .nivel(new Random().nextInt(99) + 1)
-                        .coins(BigDecimal.valueOf(new Random().nextDouble() * 1000))
+                        .moeda(BigDecimal.valueOf(new Random().nextDouble() * 1000))
                         .build();
 
                 repository.save(personagem);

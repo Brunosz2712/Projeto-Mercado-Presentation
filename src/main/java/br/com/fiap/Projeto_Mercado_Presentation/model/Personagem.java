@@ -29,7 +29,7 @@ public class Personagem {
     private Long id;
 
     @NotBlank(message = "Nome é obrigatório")
-    private String name;
+    private String nome;
 
     @NotBlank(message = "Classe é obrigatória")
     @Pattern(regexp = "^(guerreiro|mago|arqueiro)$", message = "Classe deve ser guerreiro, mago ou arqueiro")
@@ -41,5 +41,5 @@ public class Personagem {
 
     @NotNull(message = "Saldo de moedas é obrigatório")
     @DecimalMin(value = "0.0", inclusive = true, message = "Moedas deve ser um valor positivo")
-    private BigDecimal coins;
+    private BigDecimal moeda;
 }

@@ -50,7 +50,7 @@ public class PersonagemController {
         }
     )
     public Personagem create(@RequestBody @Valid Personagem personagem) {
-        log.info("Cadastrando personagem " + personagem.getName());
+        log.info("Cadastrando personagem " + personagem.getNome());
         return repository.save(personagem);
     }
 
